@@ -1,1 +1,1 @@
-# webpack-starter-pack
+# odin-todo-list

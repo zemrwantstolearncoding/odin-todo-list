@@ -242,16 +242,18 @@ const displayController = (function () {
 
     const sortTodos = function (sortId) {
         const currentProject = getCurrentProject();
-        switch(sortId) {
-            case 1:
-                currentProject.sortTodosByDateCreated();
-                break;
-            case 2:
-                currentProject.sortTodosByDueDate();
-                break;
-            case 3:
-                currentProject.sortTodosByPriority();
-                break;
+        if (currentProject) {
+            switch(sortId) {
+                case 1:
+                    currentProject.sortTodosByDateCreated();
+                    break;
+                case 2:
+                    currentProject.sortTodosByDueDate();
+                    break;
+                case 3:
+                    currentProject.sortTodosByPriority();
+                    break;
+            }
         }
         renderTodos();
     };

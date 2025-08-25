@@ -901,6 +901,7 @@ const displayController = (function () {
             }
             if (progressStatus && progressStatus.contains(event.target)) {
                 getCurrentProject().toggleTodoCompletion(todoId);
+                saveProjectsToStorage();
                 clickedTodoItem.classList.toggle("completed");
                 clickedTodoItem.classList.toggle("in-progress");
                 sortTodos(sortId);
